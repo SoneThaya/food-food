@@ -24,11 +24,11 @@ class Register extends React.Component {
     e.preventDefault();
 
     axios
-      .post("https://bw-expatjournal.herokuapp.com/api/auth/register", this.state.credentials)
+      .post("https://grub-grub-backend.herokuapp.com/api/auth/register", this.state.credentials)
       .then(res => {
         console.log(res)
         localStorage.setItem("token", res.data.payload);
-        //this.props.history.push("/users");
+        this.props.history.push("/login");
       })
       .catch(err => console.log(err));
   }
