@@ -1,14 +1,13 @@
 import React from 'react';
-import { axiosWithAuth } from '../utils/axiosWithAuth'
-import { Styles } from '../components/Styles'
+import axios from 'axios'
+import { Styles } from './Styles'
 import { Link, useHistory } from "react-router-dom";
 
-class Login extends React.Component {
-
+class Register extends React.Component {
   state = {
     credentials: {
       username: '',
-      password: ''
+      password: '',
     }
   }
 
@@ -21,15 +20,15 @@ class Login extends React.Component {
     })
   }
 
-  login = e => {
+  signup = e => {
     e.preventDefault();
 
-    axiosWithAuth()
-      .post("/auth/login", this.state.credentials)
+    axios
+      .post("https://bw-expatjournal.herokuapp.com/api/auth/register", this.state.credentials)
       .then(res => {
         console.log(res)
-        localStorage.setItem("token", res.data.token);
-        this.props.history.push("/menu");
+        localStorage.setItem("token", res.data.payload);
+        //this.props.history.push("/users");
       })
       .catch(err => console.log(err));
   }
@@ -38,8 +37,8 @@ class Login extends React.Component {
     return (
       <div>
         <Styles>
-        <form onSubmit={this.login}>
-          <h2>Login</h2>
+        <form onSubmit={this.signup}>
+          <h2>Register</h2>
           <input
             type="text"
             name="username"
@@ -54,10 +53,11 @@ class Login extends React.Component {
             onChange={this.handleChange}
             placeholder="password"
           />
-            <button>Log in</button>
+          
+            <button>Sign Up</button>
             
             <h5>
-          Need to register? <Link to="/register">Register here.</Link>
+          Already registered? <Link to="/login">Login here.</Link>
         </h5>
           </form>
           </Styles>
@@ -66,4 +66,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login
+export default Register

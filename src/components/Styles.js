@@ -95,6 +95,7 @@ export const Styles = styled.div`
     input, select {
       font-size: 1.2em;
       width: 100%;
+      margin: 2px;
     }
     .errors {
       color: red;
@@ -113,6 +114,6 @@ export const Styles = styled.div`
     cursor: pointer;
   }
   button:hover {
-    background: #FF9233;
+    background: #2ECC71;
   }
 `

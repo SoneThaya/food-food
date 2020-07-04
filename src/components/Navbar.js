@@ -16,7 +16,9 @@ const Navbar = () => {
             <Link to='/breakfast'>Breakfast</Link>
             <Link to='/lunch'>Lunch</Link>
             <Link to='/dinner'>Dinner</Link>
+            <Link to='/add-item'>Add Item</Link>
             <Link to='/login'>Login</Link>
+            <Link to='/register'>Register</Link>
           </nav>
           </div>
         </div>
