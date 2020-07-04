@@ -9,10 +9,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { FormHelperText } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 545,
+    margin: '25px',
   },
 });
 
@@ -60,12 +62,9 @@ function Menu() {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
+            <Typography gutterBottom variant="h6" component="h6">
+              Price: {item.price}
+            </Typography>
           </CardActions>
         </Card>
     </Grid>

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Menu from './pages/Menu'
+import Menu from './pages/Menu';
+import Login from './components/Login'
 
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/menu' exact component={Menu} />
+          <Route path='/login' exact component={Login} />
         </Switch>
       </Router>
     </div>

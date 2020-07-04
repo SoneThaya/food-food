@@ -25,12 +25,13 @@ export const NavStyles = styled.div`
 
   nav {
     float: right;
+    display: flex;
   }
 
   nav a {
     margin: 0;
     padding: 0;
-    display: inline-block;
+    display: flex;
     margin-left: 35px;
     padding-top: 13px;
     color: #000000;
@@ -38,7 +39,8 @@ export const NavStyles = styled.div`
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
-
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
 
@@ -62,4 +64,55 @@ export const NavStyles = styled.div`
     width: 100%;
   }
 
+`
+
+export const Styles = styled.div`
+  * {
+    font-family: 'Raleway', sans-serif;
+  }
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  p {
+    color: red;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    
+
+    label {
+      margin-top: 20px;
+    }
+
+    input, select {
+      font-size: 1.2em;
+      width: 100%;
+    }
+    .errors {
+      color: red;
+      font-size: .8em;
+    }
+    
+  }
+
+  button {
+    background: grey;
+    padding: 10px;
+    color: black;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #FF9233;
+  }
 `
