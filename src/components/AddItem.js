@@ -27,7 +27,7 @@ class AddStory extends React.Component {
     e.preventDefault();
 
     axiosWithAuth()
-      .post("/menu", this.state.credentials)
+      .post("https://grub-grub-backend.herokuapp.com/api/menu", this.state.credentials)
       .then(res => {
         console.log(res)
         localStorage.setItem("token", res.data.token);

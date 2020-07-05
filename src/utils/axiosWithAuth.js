@@ -6,6 +6,6 @@ export const axiosWithAuth = () => {
     headers: {
       Authorization: token
     },
-    baseURL: 'https://grub-grub-backend.herokuapp.com/api/'
+    baseURL: 'https://grub-grub-backend.herokuapp.com/api'
   })
 }
